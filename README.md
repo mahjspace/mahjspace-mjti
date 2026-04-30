@@ -87,18 +87,22 @@ The first deploy will fail because env vars aren't set yet — that's expected. 
 
 Without this, signup will silently fail once we wire it up.
 
-### 5. (Recommended) Set up the custom subdomain
+### 5. Set up the custom subdomain
 
-To keep the production rewrite stable across Vercel project renames:
+The page is reachable two ways once everything is wired up:
+- `mahjspace.com/mjti` (the canonical public URL — served via Vercel rewrite from the main app)
+- `mjti.mahjspace.com` (direct subdomain — also works, and is a cleaner URL to share)
+
+Both serve the same content. Steps:
 
 1. In GoDaddy → mahjspace.com DNS settings, add a CNAME record:
    - Type: `CNAME`
-   - Name: `mjti-internal`
+   - Name: `mjti`
    - Value: `cname.vercel-dns.com`
    - TTL: default
-2. In Vercel → mahjspace-mjti project → **Settings → Domains** → add `mjti-internal.mahjspace.com`
+2. In Vercel → mahjspace-mjti project → **Settings → Domains** → add `mjti.mahjspace.com`
 3. Vercel verifies the DNS automatically (1–5 minutes)
-4. Add `mjti-internal.mahjspace.com` to the Firebase authorized domains list (step 4)
+4. Add `mjti.mahjspace.com` to the Firebase authorized domains list (step 4)
 
 The subdomain is the rewrite target — it stays put even if the Vercel project URL changes.
 
