@@ -14,18 +14,6 @@ export function LandingPage() {
               {para}
             </p>
           ))}
-          <a
-            href="#signup"
-            className="btn-primary"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textDecoration: "none",
-            }}
-          >
-            {content.hero.primaryCta}
-          </a>
           <p className="hero__note">{content.hero.note}</p>
         </section>
       </div>

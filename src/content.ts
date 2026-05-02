@@ -51,7 +51,7 @@ export const content = {
     emailPlaceholder: "you@example.com",
     passwordLabel: "Password",
     passwordPlaceholder: "Make it memorable",
-    firstNameLabel: "First name",
+    firstNameLabel: "Name",
     firstNamePlaceholder: "So I know what to call you",
     submit: "Sign up free",
     legal:
@@ -64,7 +64,7 @@ export const content = {
     headline: "Welcome!",
     body: "MahjSpace is a small app I built for American Mah Jongg players who want to track their wins on the annual card, log photos and memories, and see what their friends are doing. The first 500 spots filled fast. Drop your email below and I'll reach out the moment the next wave opens — I'm releasing more spots every couple of weeks.",
     emailLabel: "Email",
-    firstNameLabel: "First name",
+    firstNameLabel: "Name",
     submit: "Save my spot",
     successHeadline: "You're on the list.",
     successBody:
