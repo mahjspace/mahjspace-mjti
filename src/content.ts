@@ -12,23 +12,19 @@ export const content = {
 
   screenshots: [
     {
-      caption:
-        "The first time you check off a hand you've been chasing all year.",
-      // src placeholder until real screenshots are dropped in /public/screenshots/
-      src: "",
-      alt: "MahjSpace tracker showing the 2026 card with progress",
+      caption: "The 2026 card is all in one place. Tap a hand to log a win.",
+      src: "/screenshots/tracker.png",
+      alt: "MahjSpace tracker showing the 2026 NMJL card with progress bar",
     },
     {
-      caption:
-        "Log the date, the place, a photo, and the friends who watched it happen.",
-      src: "",
-      alt: "Evidence card for a logged win with photo and notes",
+      caption: "Log every win. Start to notice patterns in your game play!",
+      src: "/screenshots/wins-list.png",
+      alt: "Wins-on-this-hand modal showing multiple logged wins for one hand",
     },
     {
-      caption:
-        "Milestones along the way — because every player deserves a moment.",
-      src: "",
-      alt: "Milestone celebration with confetti and badge",
+      caption: "See how your friends are doing, and cheer each other on!",
+      src: "/screenshots/friends.png",
+      alt: "Friends tab showing progress comparison and friend requests",
     },
   ],
 
