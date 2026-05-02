@@ -205,12 +205,12 @@ textarea {
 }
 
 .screenshots-inner {
-  max-width: 1120px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
 }
 
 .screenshot {

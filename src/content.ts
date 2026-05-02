@@ -21,8 +21,13 @@ export const content = {
     },
     {
       caption: "Log every win. Start to notice patterns in your game play!",
-      src: "/screenshots/wins-list.png",
+      src: "/screenshots/win-list.png",
       alt: "Wins-on-this-hand modal showing multiple logged wins for one hand",
+    },
+    {
+      caption: "Snap a photo, jot a note — save the moment.",
+      src: "/screenshots/evidence.png",
+      alt: "Evidence card with photo, date, location, and notes for a logged win",
     },
     {
       caption: "See how your friends are doing, and cheer each other on!",
