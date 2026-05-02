@@ -55,15 +55,18 @@ h1,
 h2,
 h3 {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
+  /* Match the main app's landing-serif: SOFT axis softens corners,
+     opsz 144 picks the display master with more contrast. */
+  font-variation-settings: "SOFT" 30, "opsz" 144;
   color: var(--navy);
   letter-spacing: -0.01em;
   margin: 0;
 }
 
 h1 {
-  font-size: clamp(2rem, 6vw, 3rem);
-  line-height: 1.1;
+  font-size: clamp(2.25rem, 6.5vw, 3.25rem);
+  line-height: 1.08;
 }
 
 h2 {
@@ -141,8 +144,12 @@ textarea {
   font-size: 1.125rem;
   line-height: 1.6;
   color: var(--navy-soft);
-  margin-bottom: 32px;
+  margin-bottom: 14px;
   max-width: 580px;
+}
+
+.hero__body:last-of-type {
+  margin-bottom: 32px;
 }
 
 .hero__note {
@@ -188,19 +195,26 @@ textarea {
   cursor: not-allowed;
 }
 
-/* Screenshot gallery */
+/* Screenshot gallery — breaks out of the 720px container so cells can
+   be larger; mobile becomes a horizontal swipe carousel with peek. */
 
-.screenshots {
-  padding: 32px 0 56px;
+.screenshots-section {
+  padding: 32px 0 64px;
+}
+
+.screenshots-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 12px;
 }
 
 .screenshot {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .screenshot__frame {
@@ -217,7 +231,7 @@ textarea {
   text-align: center;
   padding: 0;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-card);
 }
 
 .screenshot__frame img {
@@ -235,14 +249,35 @@ textarea {
   font-size: 0.95rem;
   color: var(--navy-soft);
   line-height: 1.45;
+  padding: 0 4px;
 }
 
+/* Mobile: horizontal swipe carousel with peek of the next card */
 @media (max-width: 720px) {
-  .screenshots {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    max-width: 320px;
-    margin: 0 auto;
+  .screenshots-inner {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 9vw;
+    gap: 12px;
+    /* Padding doubles as the peek-margin so first/last cards center
+       nicely while leaving ~9vw of the next card visible at each edge. */
+    padding: 0 9vw;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .screenshots-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .screenshot {
+    flex: 0 0 82vw;
+    scroll-snap-align: center;
+    /* Prevent the caption from pushing the snap area awkwardly */
+    scroll-snap-stop: always;
   }
 }
 

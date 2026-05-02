@@ -5,28 +5,49 @@ import { SignupForm } from "./SignupForm";
 export function LandingPage() {
   return (
     <div className="page">
-      <main className="container">
+      <div className="container">
         <section className="hero">
           <div className="hero__eyebrow">{content.hero.eyebrow}</div>
           <h1 className="hero__headline">{content.hero.headline}</h1>
-          <p className="hero__body">{content.hero.body}</p>
-          <a href="#signup" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}>
+          {content.hero.body.map((para, i) => (
+            <p key={i} className="hero__body">
+              {para}
+            </p>
+          ))}
+          <a
+            href="#signup"
+            className="btn-primary"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textDecoration: "none",
+            }}
+          >
             {content.hero.primaryCta}
           </a>
           <p className="hero__note">{content.hero.note}</p>
         </section>
+      </div>
 
-        <section className="screenshots" aria-label="Inside MahjSpace">
+      <section className="screenshots-section" aria-label="Inside MahjSpace">
+        <div className="screenshots-inner">
           {content.screenshots.map((s, i) => (
             <figure key={i} className="screenshot">
               <div className="screenshot__frame">
-                {s.src ? <img src={s.src} alt={s.alt} /> : <span>Screenshot {i + 1} placeholder</span>}
+                {s.src ? (
+                  <img src={s.src} alt={s.alt} />
+                ) : (
+                  <span>Screenshot {i + 1} placeholder</span>
+                )}
               </div>
               <figcaption className="screenshot__caption">{s.caption}</figcaption>
             </figure>
           ))}
-        </section>
+        </div>
+      </section>
 
+      <div className="container">
         <section className="benefits">
           <h2 className="benefits__heading">{content.benefits.heading}</h2>
           <ul className="benefits__list">
@@ -42,7 +63,7 @@ export function LandingPage() {
           <h2 className="signup__heading">{content.signupForm.heading}</h2>
           <SignupForm />
         </section>
-      </main>
+      </div>
 
       <Footer />
     </div>
