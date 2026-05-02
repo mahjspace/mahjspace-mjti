@@ -1,7 +1,9 @@
 /* MahjSpace design tokens — mirrors the main app palette */
 :root {
-  --cream: #f1efe8;
-  --cream-card: #fbf9f3;
+  /* Soft pink page background — cream with a rose blush so the page
+     feels warmer than the main app's pure cream. */
+  --cream: #f5e8e6;
+  --cream-card: #fbf2f0;
   --navy: #242d44;
   --navy-soft: #4a5474;
   --rose: #c14b6e;
@@ -252,17 +254,17 @@ textarea {
   padding: 0 4px;
 }
 
-/* Mobile: horizontal swipe carousel with peek of the next card */
+/* Mobile: horizontal swipe carousel with peek of the next card.
+   Card 78vw + side padding 9vw + gap 12px leaves ~10vw of the next
+   card visible past the right edge — readable as "there's more" without
+   eating too much of the focused screenshot. */
 @media (max-width: 720px) {
   .screenshots-inner {
     display: flex;
     grid-template-columns: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding: 0 9vw;
     gap: 12px;
-    /* Padding doubles as the peek-margin so first/last cards center
-       nicely while leaving ~9vw of the next card visible at each edge. */
     padding: 0 9vw;
     max-width: 100%;
     -webkit-overflow-scrolling: touch;
@@ -274,9 +276,8 @@ textarea {
   }
 
   .screenshot {
-    flex: 0 0 82vw;
+    flex: 0 0 78vw;
     scroll-snap-align: center;
-    /* Prevent the caption from pushing the snap area awkwardly */
     scroll-snap-stop: always;
   }
 }

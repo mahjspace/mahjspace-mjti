@@ -4,13 +4,13 @@
 export const content = {
   hero: {
     eyebrow: "Early access for MJTI members",
-    headline: "Welcome, “Mah Jongg, That’s It” Members",
+    headline: "Welcome!",
     body: [
       "MahjSpace is a small app I built for American Mah Jongg players who want to track their wins on the annual card, log photos and memories from each one, and see what their friends are doing.",
       "Johni is offering early access to you, so I can get your honest feedback before opening up wider. Thank you! — Jennie",
     ],
     primaryCta: "Sign up free",
-    note: "Free during early access. There are 500 spots in the first cohort — when those fill, you can drop your email for the next wave.",
+    note: "There are 500 spots in the first cohort. If those are already filled I will let you know when I open the next wave.",
   },
 
   screenshots: [
@@ -50,13 +50,13 @@ export const content = {
     firstNamePlaceholder: "So I know what to call you",
     submit: "Sign up free",
     legal:
-      "Operated by JL Horn Apparel LLC. By signing up you agree to the Terms and Privacy Policy.",
+      "Operated by MahjSpace. By signing up you agree to the Terms and Privacy Policy.",
     termsUrl: "https://mahjspace.com/?page=terms",
     privacyUrl: "https://mahjspace.com/?page=privacy",
   },
 
   waitlist: {
-    headline: "Welcome, “Mah Jongg, That’s It” Members",
+    headline: "Welcome!",
     body: "MahjSpace is a small app I built for American Mah Jongg players who want to track their wins on the annual card, log photos and memories, and see what their friends are doing. The first 500 spots filled fast. Drop your email below and I'll reach out the moment the next wave opens — I'm releasing more spots every couple of weeks.",
     emailLabel: "Email",
     firstNameLabel: "First name",

@@ -75,7 +75,7 @@ export function SignupForm() {
       </button>
 
       <p className="signup__legal">
-        Operated by JL Horn Apparel LLC. By signing up you agree to the{" "}
+        By signing up you agree to the{" "}
         <a href={c.termsUrl} target="_blank" rel="noreferrer">
           Terms
         </a>{" "}
