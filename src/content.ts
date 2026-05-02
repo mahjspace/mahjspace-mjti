@@ -26,7 +26,7 @@ export const content = {
     },
     {
       caption: "Snap a photo, jot a note — save the moment.",
-      src: "/screenshots/evidence.png",
+      src: "/screenshots/evidence.jpg",
       alt: "Evidence card with photo, date, location, and notes for a logged win",
     },
     {
